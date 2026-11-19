@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Legend - a GTA VI trophy guide and tracker</title>
+<meta name="description" content="All 55 PlayStation 5 trophies for Grand Theft Auto VI with cited guides, a platinum roadmap, missable flags and an offline tracker.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="masthead">
+  <div class="mast-left">
+    <p class="kicker">PlayStation 5 &middot; 55 trophies &middot; 1 platinum</p>
+    <h1>Leonida Legend</h1>
+    <p class="standfirst">A complete trophy guide and tracker for Grand Theft Auto VI. Every guide here is written for this page and cites the guide or tracker its facts come from. One trophy can be lost; everything else waits for you after the credits.</p>
+  </div>
+  <div class="mast-right">
+    <div class="meter" id="meter" aria-live="polite">
+      <div class="meter-head"><span class="meter-num" id="pct">0%</span><span class="meter-of" id="done-of">0 of 55</span></div>
+      <div class="bar"><div class="bar-fill" id="bar-fill"></div></div>
+      <ul class="tally" id="tally"></ul>
+    </div>
+  </div>
+</header>
+
+<nav class="tabs" role="tablist">
+  <button class="tab is-on" data-view="list" role="tab">Checklist</button>
+  <button class="tab" data-view="roadmap" role="tab">Roadmap</button>
+  <button class="tab" data-view="transfer" role="tab">Export &amp; import</button>
+  <span class="tab-spacer"></span>
+  <button class="switch" id="spoiler" aria-pressed="false"><span class="dot"></span>Spoiler shield</button>
+</nav>
+
+<section class="toolbar" id="toolbar">
+  <label class="search">
+    <span class="visually-hidden">Search trophies</span>
+    <input type="search" id="q" placeholder="Search a trophy, a mission, a contact" autocomplete="off">
+  </label>
+  <div class="chips" id="chips" role="group" aria-label="Filter by kind"></div>
+  <button class="toggle" id="only-todo" aria-pressed="false">Unearned only</button>
+</section>
+
+<main>
+  <section class="view is-on" id="view-list">
+    <ol class="list" id="list"></ol>
+    <aside class="detail" id="detail" aria-live="polite"></aside>
+  </section>
+
+  <section class="view" id="view-roadmap">
+    <div class="roadmap-intro">
+      <h2>The order to earn them</h2>
+      <p id="roadmap-lede"></p>
+    </div>
+    <div id="roadmap"></div>
+  </section>
+
+  <section class="view" id="view-transfer">
+    <div class="transfer">
+      <div class="transfer-col">
+        <h2>Keep this file</h2>
+        <p>Progress lives in this browser's localStorage under one key. Export writes a small JSON file you can keep, move to another machine, or hand to a friend; import reads it back and merges or replaces.</p>
+        <div class="row">
+          <button class="btn btn-primary" id="export-file">Export to a file</button>
+          <button class="btn" id="export-copy">Show the JSON</button>
+        </div>
+        <label class="file">
+          <span>Import a file</span>
+          <input type="file" id="import-file" accept=".json,application/json">
+        </label>
+        <p class="hint" id="transfer-status">Nothing exported yet in this session.</p>
+      </div>
+      <div class="transfer-col">
+        <h2>The exported shape</h2>
+        <p>One line per earned trophy id, plus the spoiler setting. Paste a file's text here and import it if the file picker is awkward.</p>
+        <textarea id="transfer-text" spellcheck="false" aria-label="Exported JSON"></textarea>
+        <div class="row">
+          <button class="btn" id="import-text">Import this text</button>
+          <button class="btn btn-quiet" id="wipe">Erase progress</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="colophon">
+  <p>Written and built for this entry. No logo, artwork, box art or screenshot of the game appears here; the list's names, descriptions and grades are PlayStation's, kept as published. Sources named beside each trophy: PowerPyx, PSNProfiles, SixShore, gta.guide and GTABase. Unaffiliated with Rockstar Games and Sony Interactive Entertainment.</p>
+  <p id="loadnote" class="loadnote"></p>
+</footer>
+
+<script src="app.js" defer></script>
+</body>
+</html>

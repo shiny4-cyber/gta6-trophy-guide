@@ -1,0 +1,35 @@
+[
+  {
+    "file": "1-checklist-and-guide.jpg",
+    "view": "checklist with progress, filters and a cited guide open",
+    "path": "/",
+    "trophy": 28,
+    "earned": 19,
+    "viewport": { "width": 1280, "height": 800 }
+  },
+  {
+    "file": "2-roadmap.jpg",
+    "view": "roadmap to the platinum, stages and missable board",
+    "path": "/",
+    "view_tab": "roadmap",
+    "earned": 19,
+    "viewport": { "width": 1280, "height": 800 }
+  },
+  {
+    "file": "3-spoiler-shield.jpg",
+    "view": "spoiler shield on, a story trophy hidden",
+    "path": "/",
+    "trophy": 4,
+    "spoiler": true,
+    "earned": 19,
+    "viewport": { "width": 1280, "height": 800 }
+  },
+  {
+    "file": "4-export-import.jpg",
+    "view": "export and import of the progress file",
+    "path": "/",
+    "view_tab": "transfer",
+    "earned": 19,
+    "viewport": { "width": 1280, "height": 800 }
+  }
+]
