@@ -49,8 +49,17 @@ cpSync(shotsDir, join(outDir, 'screenshots'), { recursive: true });
 const dossier = buildDossier(outDir, CAPS);
 writeFileSync(join(outDir, 'dossier.json'), dossier);
 
-const appBytes = statSync(join(outDir, 'app')).size;
+const appFiles = [];
+(function walk(dir) {
+  for (const entry of readdirSync(dir, { withFileTypes: true })) {
+    const path = join(dir, entry.name);
+    if (entry.isDirectory()) walk(path);
+    else appFiles.push(path);
+  }
+})(appDir);
+const appBytes = appFiles.reduce((sum, path) => sum + statSync(path).size, 0);
+
 console.log(
   `main.ts: wrote ${outDir} - ${dossier.length} bytes of dossier.json, ${shots.length} screenshots, ` +
-  `app/ ${appBytes} bytes on disk`
+  `app/ ${appFiles.length} files and ${appBytes} bytes`
 );
