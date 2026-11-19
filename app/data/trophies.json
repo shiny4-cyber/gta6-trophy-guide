@@ -518,11 +518,7 @@
    ],
    "chapter": "Post-story",
    "missable": false,
-   "counts": {
-    "label": "checklist",
-    "done": 0,
-    "total": 1
-   },
+   "counts": null,
    "guide": "The checklist only becomes visible after the story, under Progress > Stats > 100% Completion, but work done during the story counts retroactively, so there is no reason to save it all for the end. It is far more forgiving than the label implies: everything is required only for robberies (8 bank vaults, 39 gang operations), underwater discoveries, all 42 shooting range golds, all 42 drone races and all 15 of Bret's target decks. Everything else is partial - 70 of 80 challenges, 15 of 18 meditations, 300 of 397 stunts, 200 of 277 base model vehicles, 100 of 255 animals, any 100 optional missions. Nothing on the checklist is missable.",
    "steps": [
     "Turn on progress and collectible notifications in the UI settings before you start.",
